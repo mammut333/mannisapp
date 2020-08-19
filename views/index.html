@@ -1,0 +1,26 @@
+
+    <h1>Überschrift</h1>
+
+    
+    {{#each entries}}
+<div id="guestbook-entries">
+    <div class="entry">
+    <h3>{{this.title}} <br>
+        {{this.content}}
+    </h3>
+    </div>  
+</div>
+        {{/each}}
+    
+
+    <form class='new-entry' method="POST" action="/guestbook/new">
+        <label for='title'>Titel: </label>
+        <input id ='title' type='text' name='title'/>
+        <br>
+         <label for='content'>Inhalt: </label>
+        <textarea id='content' name='content'></textarea>
+        <br>
+        <input type='submit' value='Absenden!'>
+    </form>
+    <script src="/public/jquery-3.5.1.js"></script>
+    <script src="/public/build/bundle.js"></script>
