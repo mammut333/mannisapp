@@ -31,7 +31,7 @@ app.engine('html', expressHandlebars({
     extname:'.html'
 }));
 
-app.get('/index.html', (req, res) => {
+app.get('/index', (req, res) => {
     res.render('index', {
         entries: entries
     });
